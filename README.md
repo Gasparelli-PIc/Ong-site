@@ -59,6 +59,13 @@ instituto-patas-que-transformam/
 
 Abra `index.html` diretamente no navegador ou utilize uma extensão como Live Server no VS Code.
 
+ou 
+
+Abra o link abaixo:
+
+https://gasparelli-pic.github.io/Ong-site/
+
+
 ## Observação
 
 Este é um projeto acadêmico. Os formulários são apenas demonstrações no front-end e não enviam dados para um servidor real.
