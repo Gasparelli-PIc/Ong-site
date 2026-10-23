@@ -1,134 +1,220 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cadastre-se como voluntário ou apoiador do Instituto Patas Que Transformam.">
     <title>Cadastro - Instituto Patas Que Transformam</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
+
 <body>
-    <header>
-        <h1>Instituto Patas Que Transformam</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="projetos.html">Projetos</a></li>
-                <li><a href="doar.html">Faça sua doação</a></li>
-                <li><a href="cadastro.html">Cadastro</a></li>
-            </ul>
-        </nav>
+
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+    <header class="site-header">
+        <div class="container site-header__inner">
+            <h1 class="site-title">Instituto Patas Que Transformam</h1>
+
+            <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">
+                <span class="menu-toggle__bar"></span>
+                <span class="menu-toggle__bar"></span>
+                <span class="menu-toggle__bar"></span>
+            </button>
+
+            <nav class="main-nav" aria-label="Menu principal">
+                <ul class="menu" id="menu-principal">
+                    <li class="menu__item"><a class="menu__link" href="index.html">Início</a></li>
+                    <li class="menu__item"><a class="menu__link" href="projetos.html">Projetos</a></li>
+                    <li class="menu__item"><a class="menu__link" href="index.html#noticias">Notícias</a></li>
+
+                    <li class="menu__item menu__item--dropdown">
+                        <a class="menu__link" href="index.html#doacao">Faça sua doação</a>
+                        <button class="submenu-toggle" type="button" aria-expanded="false" aria-controls="submenu-doacao" aria-label="Abrir submenu de doação">
+                            <span aria-hidden="true">▾</span>
+                        </button>
+                        <ul class="submenu" id="submenu-doacao">
+                            <li><a class="submenu__link" href="index.html#doacao">Campanha atual</a></li>
+                            <li><a class="submenu__link" href="projetos.html#projetos">Todas as campanhas</a></li>
+                            <li><a class="submenu__link" href="doar.html">Doar agora</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="menu__item"><a class="menu__link" href="cadastro.html" aria-current="page">Seja um voluntário</a></li>
+                    <li class="menu__item"><a class="menu__link" href="index.html#transparencia">Transparência</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section>
-            <h2>Faça parte da nossa missão!</h2>
-            <p>Preencha o formulário para se cadastrar como voluntário ou apoiador do Instituto.</p>
-            <img src="img/voluntarios ajudando.jpg" alt="Voluntários ajudando animais resgatados" width="400">
+    <main id="conteudo" class="site-main">
+
+        <section id="missao" class="section section--cadastro-intro">
+            <div class="container">
+                <div class="grid">
+                    <div class="col-12 col-lg-7">
+                        <h2>Faça parte da nossa missão!</h2>
+                        <p>Preencha o formulário para se cadastrar como voluntário ou apoiador do Instituto.</p>
+                    </div>
+
+                    <figure class="col-12 col-lg-5 media">
+                        <img src="img/voluntarios ajudando.jpg" alt="Voluntários ajudando animais resgatados" loading="lazy">
+                    </figure>
+                </div>
+            </div>
         </section>
 
-        <section>
-            <h2>Formulário de cadastro</h2>
-            <form id="form-cadastro">
-                <fieldset>
-                    <legend>Dados pessoais</legend>
+        <section id="formulario" class="section section--formulario">
+            <div class="container">
+                <h2>Formulário de cadastro</h2>
 
-                    <p>
-                        <label for="nome">Nome completo: *</label><br>
-                        <input type="text" id="nome" name="nome" required minlength="3">
-                    </p>
-                    <p>
-                        <label for="email">E-mail: *</label><br>
-                        <input type="email" id="email" name="email" required>
-                    </p>
-                    <p>
-                        <label for="cpf">CPF: *</label><br>
-                        <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" required maxlength="14">
-                    </p>
-                    <p>
-                        <label for="telefone">Telefone: *</label><br>
-                        <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" required maxlength="15">
-                    </p>
-                    <p>
-                        <label for="nascimento">Data de nascimento: *</label><br>
-                        <input type="date" id="nascimento" name="nascimento" required>
-                    </p>
-                </fieldset>
+                <p class="form-note"><span class="required-mark" aria-hidden="true">*</span> Campos obrigatórios.</p>
 
-                <fieldset>
-                    <legend>Endereço</legend>
-                    <p>
-                        <label for="endereco">Endereço completo: *</label><br>
-                        <input type="text" id="endereco" name="endereco" required>
-                    </p>
-                    <p>
-                        <label for="cep">CEP: *</label><br>
-                        <input type="text" id="cep" name="cep" placeholder="00000-000" required maxlength="9">
-                    </p>
-                    <p>
-                        <label for="cidade">Cidade: *</label><br>
-                        <input type="text" id="cidade" name="cidade" required>
-                    </p>
-                    <p>
-                        <label for="estado">Estado: *</label><br>
-                        <select id="estado" name="estado" required>
-                            <option value="">Selecione seu estado</option>
-                            <option>AC</option><option>AL</option><option>AP</option><option>AM</option>
-                            <option>BA</option><option>CE</option><option>DF</option><option>ES</option>
-                            <option>GO</option><option>MA</option><option>MT</option><option>MS</option>
-                            <option>MG</option><option>PA</option><option>PB</option><option>PR</option>
-                            <option>PE</option><option>PI</option><option>RJ</option><option>RN</option>
-                            <option>RS</option><option>RO</option><option>RR</option><option>SC</option>
-                            <option>SP</option><option>SE</option><option>TO</option>
-                        </select>
-                    </p>
-                </fieldset>
+                <form id="form-cadastro" class="form">
 
-                <fieldset>
-                    <legend>Como deseja participar?</legend>
-                    <p>
-                        <input type="radio" id="voluntario" name="perfil" value="Voluntário" required>
-                        <label for="voluntario">Quero ser voluntário</label>
-                    </p>
-                    <p>
-                        <input type="radio" id="apoiador" name="perfil" value="Doador/Apoiador">
-                        <label for="apoiador">Quero ser doador/apoiador</label>
-                    </p>
-                    <p>
-                        <label for="interesse">Área de interesse:</label><br>
-                        <select id="interesse" name="interesse">
-                            <option value="">Selecione uma opção</option>
-                            <option>Cuidados com animais</option>
-                            <option>Adoção responsável</option>
-                            <option>Eventos e campanhas</option>
-                            <option>Saúde animal</option>
-                            <option>Doações</option>
-                        </select>
-                    </p>
-                    <p>
-                        <label for="mensagem">Conte um pouco sobre seu interesse (opcional):</label><br>
-                        <textarea id="mensagem" name="mensagem" rows="4"></textarea>
-                    </p>
-                </fieldset>
+                    <fieldset class="form-group">
+                        <legend>Dados pessoais</legend>
 
-                <p>
-                    <input type="checkbox" id="privacidade" name="privacidade" required>
-                    <label for="privacidade">Li e aceito a Política de Privacidade. *</label>
-                </p>
+                        <div class="grid">
+                            <div class="form-field col-12">
+                                <label for="nome">Nome completo <span class="required-mark" aria-hidden="true">*</span></label>
+                                <input type="text" id="nome" name="nome" required minlength="3" autocomplete="name" placeholder="Seu nome completo">
+                            </div>
 
-                <p>
-                    <input type="submit" value="Enviar cadastro">
-                    <input type="reset" value="Limpar formulário">
-                </p>
-                <p id="mensagem-cadastro"></p>
-            </form>
+                            <div class="form-field col-12 col-md-6">
+                                <label for="email">E-mail <span class="required-mark" aria-hidden="true">*</span></label>
+                                <input type="email" id="email" name="email" required autocomplete="email" placeholder="seuemail@exemplo.com">
+                            </div>
+
+                            <div class="form-field col-12 col-md-6">
+                                <label for="cpf">CPF <span class="required-mark" aria-hidden="true">*</span></label>
+                                <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" required maxlength="14" inputmode="numeric" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Digite o CPF no formato 000.000.000-00" aria-describedby="cpf-dica">
+                                <small class="field-hint" id="cpf-dica">Somente números; a máscara é aplicada automaticamente.</small>
+                            </div>
+
+                            <div class="form-field col-12 col-md-6">
+                                <label for="telefone">Telefone <span class="required-mark" aria-hidden="true">*</span></label>
+                                <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" required maxlength="15" autocomplete="tel" pattern="\(\d{2}\)\s\d{4,5}-\d{4}" title="Digite o telefone no formato (11) 99999-9999">
+                            </div>
+
+                            <div class="form-field col-12 col-md-6">
+                                <label for="nascimento">Data de nascimento <span class="required-mark" aria-hidden="true">*</span></label>
+                                <input type="date" id="nascimento" name="nascimento" required autocomplete="bday">
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form-group">
+                        <legend>Endereço</legend>
+
+                        <div class="grid">
+                            <div class="form-field col-12">
+                                <label for="endereco">Endereço completo <span class="required-mark" aria-hidden="true">*</span></label>
+                                <input type="text" id="endereco" name="endereco" required autocomplete="street-address" placeholder="Rua, número e complemento">
+                            </div>
+
+                            <div class="form-field col-12 col-md-4">
+                                <label for="cep">CEP <span class="required-mark" aria-hidden="true">*</span></label>
+                                <input type="text" id="cep" name="cep" placeholder="00000-000" required maxlength="9" inputmode="numeric" autocomplete="postal-code" pattern="\d{5}-\d{3}" title="Digite o CEP no formato 00000-000">
+                            </div>
+
+                            <div class="form-field col-12 col-md-5">
+                                <label for="cidade">Cidade <span class="required-mark" aria-hidden="true">*</span></label>
+                                <input type="text" id="cidade" name="cidade" required autocomplete="address-level2" placeholder="Sua cidade">
+                            </div>
+
+                            <div class="form-field col-12 col-md-3">
+                                <label for="estado">Estado <span class="required-mark" aria-hidden="true">*</span></label>
+                                <select id="estado" name="estado" required autocomplete="address-level1">
+                                    <option value="">Selecione seu estado</option>
+                                    <option>AC</option><option>AL</option><option>AP</option><option>AM</option>
+                                    <option>BA</option><option>CE</option><option>DF</option><option>ES</option>
+                                    <option>GO</option><option>MA</option><option>MT</option><option>MS</option>
+                                    <option>MG</option><option>PA</option><option>PB</option><option>PR</option>
+                                    <option>PE</option><option>PI</option><option>RJ</option><option>RN</option>
+                                    <option>RS</option><option>RO</option><option>RR</option><option>SC</option>
+                                    <option>SP</option><option>SE</option><option>TO</option>
+                                </select>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="form-group">
+                        <legend>Como deseja participar? <span class="required-mark" aria-hidden="true">*</span></legend>
+
+                        <div class="choice">
+                            <input type="radio" id="voluntario" name="perfil" value="Voluntário" required>
+                            <label for="voluntario">Quero ser voluntário</label>
+                        </div>
+
+                        <div class="choice">
+                            <input type="radio" id="apoiador" name="perfil" value="Doador/Apoiador">
+                            <label for="apoiador">Quero ser doador/apoiador</label>
+                        </div>
+
+                        <div class="grid">
+                            <div class="form-field col-12">
+                                <label for="interesse">Área de interesse</label>
+                                <select id="interesse" name="interesse">
+                                    <option value="">Selecione uma opção</option>
+                                    <option>Cuidados com animais</option>
+                                    <option>Adoção responsável</option>
+                                    <option>Eventos e campanhas</option>
+                                    <option>Saúde animal</option>
+                                    <option>Doações</option>
+                                </select>
+                            </div>
+
+                            <div class="form-field col-12">
+                                <label for="mensagem">Conte um pouco sobre seu interesse (opcional)</label>
+                                <textarea id="mensagem" name="mensagem" rows="4" placeholder="Escreva aqui, se quiser"></textarea>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <div class="choice">
+                        <input type="checkbox" id="privacidade" name="privacidade" required>
+                        <label for="privacidade">Li e aceito a Política de Privacidade. <span class="required-mark" aria-hidden="true">*</span></label>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn--primary">Enviar cadastro</button>
+                        <button type="reset" class="btn btn--outline">Limpar formulário</button>
+                    </div>
+
+                    <div id="mensagem-cadastro" class="alert alert--success" role="status" hidden></div>
+                </form>
+            </div>
         </section>
+
     </main>
 
-    <footer>
-        <h3>Contato</h3>
-        <p>E-mail: contato@patasquetransformam.org.br</p>
-        <p>Telefone: (11) 99999-9999</p>
-        <p>&copy; 2026 Instituto Patas Que Transformam.</p>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="grid">
+                <div class="col-12 col-md-4">
+                    <h3>Contato</h3>
+                    <address class="footer__address">
+                        <p>E-mail: contato@patasquetransformam.org.br</p>
+                        <p>Telefone: (11) 99999-9999</p>
+                        <p>Endereço: Rua dos Animais, 123 - Centro - São Paulo/SP</p>
+                    </address>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <h3>Siga a gente nas redes sociais</h3>
+                    <ul class="social-list">
+                        <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                        <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                        <li><a href="https://x.com/" target="_blank" rel="noopener noreferrer">X</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="footer__copy">&copy; 2026 Instituto Patas Que Transformam. Todos os direitos reservados.</p>
+        </div>
     </footer>
 
     <script>
@@ -166,8 +252,11 @@
 
         document.getElementById("form-cadastro").addEventListener("submit", function(event) {
             event.preventDefault();
-            document.getElementById("mensagem-cadastro").textContent = "Cadastro preenchido com sucesso! (Demonstração acadêmica)";
+            var mensagem = document.getElementById("mensagem-cadastro");
+            mensagem.textContent = "Cadastro preenchido com sucesso! (Demonstração acadêmica)";
+            mensagem.hidden = false;
         });
     </script>
 </body>
+
 </html>

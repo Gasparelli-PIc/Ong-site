@@ -1,224 +1,315 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça os projetos do Instituto Patas Que Transformam e saiba como doar ou ser voluntário.">
     <title>Projetos - Instituto Patas Que Transformam</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
+
 <body>
 
-    <header>
-        <h1>Instituto Patas Que Transformam</h1>
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
 
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="projetos.html">Projetos</a></li>
-                <li><a href="index.html#noticias">Notícias</a></li>
-                <li><a href="index.html#doacao">Faça sua doação</a></li>
-                <li><a href="cadastro.html">Seja um voluntário</a></li>
-                <li><a href="index.html#transparencia">Transparência</a></li>
-            </ul>
-        </nav>
+    <header class="site-header">
+        <div class="container site-header__inner">
+            <h1 class="site-title">Instituto Patas Que Transformam</h1>
+
+            <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">
+                <span class="menu-toggle__bar"></span>
+                <span class="menu-toggle__bar"></span>
+                <span class="menu-toggle__bar"></span>
+            </button>
+
+            <nav class="main-nav" aria-label="Menu principal">
+                <ul class="menu" id="menu-principal">
+                    <li class="menu__item"><a class="menu__link" href="index.html">Início</a></li>
+                    <li class="menu__item"><a class="menu__link" href="projetos.html" aria-current="page">Projetos</a></li>
+                    <li class="menu__item"><a class="menu__link" href="index.html#noticias">Notícias</a></li>
+
+                    <li class="menu__item menu__item--dropdown">
+                        <a class="menu__link" href="index.html#doacao">Faça sua doação</a>
+                        <button class="submenu-toggle" type="button" aria-expanded="false" aria-controls="submenu-doacao" aria-label="Abrir submenu de doação">
+                            <span aria-hidden="true">▾</span>
+                        </button>
+                        <ul class="submenu" id="submenu-doacao">
+                            <li><a class="submenu__link" href="index.html#doacao">Campanha atual</a></li>
+                            <li><a class="submenu__link" href="projetos.html#projetos">Todas as campanhas</a></li>
+                            <li><a class="submenu__link" href="doar.html">Doar agora</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="menu__item"><a class="menu__link" href="cadastro.html">Seja um voluntário</a></li>
+                    <li class="menu__item"><a class="menu__link" href="index.html#transparencia">Transparência</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <hr>
+    <main id="conteudo" class="site-main">
 
-    <main>
+        <section id="por-que-ajudar" class="section section--por-que-ajudar">
+            <div class="container">
+                <h2>Por que ser voluntário e doar?</h2>
 
-        <section id="por-que-ajudar">
-            <h2>Por que ser voluntário e doar?</h2>
+                <div class="grid">
+                    <figure class="col-12 col-lg-5 media">
+                        <img src="img/o-que-e-ser-voluntario.png" alt="Voluntário com um cachorro resgatado" loading="lazy">
+                    </figure>
 
-            <img src="img/o-que-e-ser-voluntario.png" alt="Voluntário com um cachorro resgatado" width="400">
+                    <div class="col-12 col-lg-7">
+                        <p>
+                            Ser voluntário ou fazer uma doação é um gesto simples que muda a vida de
+                            quem recebe e também a de quem oferece. Para os animais, a sua ajuda
+                            significa comida, tratamento veterinário, abrigo seguro e a chance de
+                            encontrar uma família que vai amá-los para sempre.
+                        </p>
 
-            <p>
-                Ser voluntário ou fazer uma doação é um gesto simples que muda a vida de
-                quem recebe e também a de quem oferece. Para os animais, a sua ajuda
-                significa comida, tratamento veterinário, abrigo seguro e a chance de
-                encontrar uma família que vai amá-los para sempre.
-            </p>
+                        <p>
+                            Para você, fazer o bem traz sentimentos de propósito, gratidão e
+                            pertencimento. Quem se dedica a uma causa costuma se sentir mais feliz,
+                            menos estressado e mais conectado com as pessoas ao redor. Dedicar um
+                            pouco do seu tempo ou contribuir com qualquer valor faz bem para o
+                            coração, e o carinho de um animal resgatado é a melhor recompensa.
+                        </p>
 
-            <p>
-                Para você, fazer o bem traz sentimentos de propósito, gratidão e
-                pertencimento. Quem se dedica a uma causa costuma se sentir mais feliz,
-                menos estressado e mais conectado com as pessoas ao redor. Dedicar um
-                pouco do seu tempo ou contribuir com qualquer valor faz bem para o
-                coração, e o carinho de um animal resgatado é a melhor recompensa.
-            </p>
-
-            <p>
-                Conheça abaixo os nossos projetos e escolha o que mais toca você.
-                Juntos, somos as patas que transformam!
-            </p>
+                        <p>
+                            Conheça abaixo os nossos projetos e escolha o que mais toca você.
+                            Juntos, somos as patas que transformam!
+                        </p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <hr>
+        <section id="projetos" class="section section--projetos">
+            <div class="container">
+                <h2>Nossos projetos</h2>
 
-        <section id="projetos">
-            <h2>Nossos projetos</h2>
+                <div class="grid">
 
-            <article>
-                <h3>Resgate e Acolhimento</h3>
+                    <article class="card card--project col-12 col-md-6 col-lg-4">
+                        <figure class="card__media">
+                            <img src="img/cachorro-resgatado.jpg" alt="Resgate de cachorro abandonado" loading="lazy">
+                        </figure>
+                        <div class="card__body">
+                            <span class="badge badge--resgate">Resgate</span>
+                            <h3>Resgate e Acolhimento</h3>
+                            <p>
+                                Nossa equipe e nossos voluntários resgatam animais em situação de
+                                abandono ou maus-tratos, oferecendo atendimento de emergência,
+                                alimentação e um abrigo seguro.
+                            </p>
+                        </div>
+                        <div class="card__actions">
+                            <a class="btn btn--primary" href="doar.html?campanha=resgate">Doar</a>
+                            <a class="btn btn--outline" href="cadastro.html">Ser voluntário</a>
+                        </div>
+                    </article>
 
-                <img src="img/cachorro-resgatado.jpg" alt="Resgate de cachorro abandonado" width="300">
+                    <article class="card card--project col-12 col-md-6 col-lg-4">
+                        <figure class="card__media">
+                            <img src="img/feira-de-adocao.jpg" alt="Família adotando um gato" loading="lazy">
+                        </figure>
+                        <div class="card__body">
+                            <span class="badge badge--adocao">Adoção</span>
+                            <h3>Adoção Responsável</h3>
+                            <p>
+                                Realizamos feiras e mutirões de adoção, com acompanhamento das
+                                famílias, para garantir que cada animal encontre um lar cheio de
+                                amor e responsabilidade.
+                            </p>
+                        </div>
+                        <div class="card__actions">
+                            <a class="btn btn--primary" href="doar.html?campanha=adocao">Doar</a>
+                            <a class="btn btn--outline" href="cadastro.html">Ser voluntário</a>
+                        </div>
+                    </article>
 
-                <p>
-                    Nossa equipe e nossos voluntários resgatam animais em situação de
-                    abandono ou maus-tratos, oferecendo atendimento de emergência,
-                    alimentação e um abrigo seguro.
-                </p>
+                    <article class="card card--project col-12 col-md-6 col-lg-4">
+                        <figure class="card__media">
+                            <img src="img/Castracao-solidaria.jpeg" alt="Veterinário realizando castração" loading="lazy">
+                        </figure>
+                        <div class="card__body">
+                            <span class="badge badge--castracao">Castração</span>
+                            <h3>Castração Solidária</h3>
+                            <p>
+                                Oferecemos castração gratuita ou a preço social para animais de
+                                famílias de baixa renda e de rua, ajudando a reduzir o abandono e a
+                                superpopulação de animais.
+                            </p>
+                        </div>
+                        <div class="card__actions">
+                            <a class="btn btn--primary" href="doar.html?campanha=castracao">Doar</a>
+                            <a class="btn btn--outline" href="cadastro.html">Ser voluntário</a>
+                        </div>
+                    </article>
 
-                <a href="doar.html?campanha=resgate"><button type="button">Doar</button></a>
-                <a href="cadastro.html"><button type="button">Ser voluntário</button></a>
-            </article>
+                    <article class="card card--project col-12 col-md-6 col-lg-4">
+                        <figure class="card__media">
+                            <img src="img/vacina-solidaria.png" alt="Cachorro sendo vacinado" loading="lazy">
+                        </figure>
+                        <div class="card__body">
+                            <span class="badge badge--saude">Saúde</span>
+                            <h3>Vacinação Gratuita</h3>
+                            <p>
+                                Promovemos dias de vacinação e vermifugação gratuitas para proteger a
+                                saúde dos animais e prevenir doenças, como a raiva, nas comunidades.
+                            </p>
+                            <ul class="tag-list">
+                                <li class="tag">Gratuito</li>
+                            </ul>
+                        </div>
+                        <div class="card__actions">
+                            <a class="btn btn--primary" href="doar.html?campanha=vacinacao">Doar</a>
+                            <a class="btn btn--outline" href="cadastro.html">Ser voluntário</a>
+                        </div>
+                    </article>
 
-            <hr>
+                    <article class="card card--project col-12 col-md-6 col-lg-4">
+                        <figure class="card__media">
+                            <img src="img/campanha de doacao.webp" alt="Animais em recuperação na casa de acolhimento" loading="lazy">
+                        </figure>
+                        <div class="card__body">
+                            <span class="badge badge--infraestrutura">Infraestrutura</span>
+                            <h3>Casa de Recuperação</h3>
+                            <p>
+                                Estamos construindo um espaço para tratar animais feridos e doentes,
+                                com baias, medicamentos e cuidados veterinários até que estejam
+                                prontos para a adoção.
+                            </p>
+                            <ul class="tag-list">
+                                <li class="tag">Campanha ativa</li>
+                            </ul>
+                        </div>
+                        <div class="card__actions">
+                            <a class="btn btn--primary" href="doar.html?campanha=casa-recuperacao">Doar</a>
+                            <a class="btn btn--outline" href="cadastro.html">Ser voluntário</a>
+                        </div>
+                    </article>
 
-            <article>
-                <h3>Adoção Responsável</h3>
+                    <article class="card card--project col-12 col-md-6 col-lg-4">
+                        <figure class="card__media">
+                            <img src="img/palestra-escola.webp" alt="Crianças em uma palestra sobre cuidados com animais" loading="lazy">
+                        </figure>
+                        <div class="card__body">
+                            <span class="badge badge--educacao">Educação</span>
+                            <h3>Educação e Conscientização</h3>
+                            <p>
+                                Levamos palestras e atividades para escolas e comunidades sobre posse
+                                responsável, maus-tratos e respeito aos animais, formando uma nova
+                                geração de protetores.
+                            </p>
+                        </div>
+                        <div class="card__actions">
+                            <a class="btn btn--primary" href="doar.html?campanha=educacao">Doar</a>
+                            <a class="btn btn--outline" href="cadastro.html">Ser voluntário</a>
+                        </div>
+                    </article>
 
-                <img src="img/feira-de-adocao.jpg" alt="Família adotando um gato" width="300">
-
-                <p>
-                    Realizamos feiras e mutirões de adoção, com acompanhamento das
-                    famílias, para garantir que cada animal encontre um lar cheio de
-                    amor e responsabilidade.
-                </p>
-
-                <a href="doar.html?campanha=adocao"><button type="button">Doar</button></a>
-                <a href="cadastro.html"><button type="button">Ser voluntário</button></a>
-            </article>
-
-            <hr>
-
-            <article>
-                <h3>Castração Solidária</h3>
-
-                <img src="img/Castracao-solidaria.jpeg" alt="Veterinário realizando castração" width="300">
-
-                <p>
-                    Oferecemos castração gratuita ou a preço social para animais de
-                    famílias de baixa renda e de rua, ajudando a reduzir o abandono e a
-                    superpopulação de animais.
-                </p>
-
-                <a href="doar.html?campanha=castracao"><button type="button">Doar</button></a>
-                <a href="cadastro.html"><button type="button">Ser voluntário</button></a>
-            </article>
-
-            <hr>
-
-            <article>
-                <h3>Vacinação Gratuita</h3>
-
-                <img src="img/vacina-solidaria.png" alt="Cachorro sendo vacinado" width="300">
-
-                <p>
-                    Promovemos dias de vacinação e vermifugação gratuitas para proteger a
-                    saúde dos animais e prevenir doenças, como a raiva, nas comunidades.
-                </p>
-
-                <a href="doar.html?campanha=vacinacao"><button type="button">Doar</button></a>
-                <a href="cadastro.html"><button type="button">Ser voluntário</button></a>
-            </article>
-
-            <hr>
-
-            <article>
-                <h3>Casa de Recuperação</h3>
-
-                <img src="img/campanha de doacao.webp" alt="Animais em recuperação na casa de acolhimento" width="300">
-
-                <p>
-                    Estamos construindo um espaço para tratar animais feridos e doentes,
-                    com baias, medicamentos e cuidados veterinários até que estejam
-                    prontos para a adoção.
-                </p>
-
-                <a href="doar.html?campanha=casa-recuperacao"><button type="button">Doar</button></a>
-                <a href="cadastro.html"><button type="button">Ser voluntário</button></a>
-            </article>
-
-            <hr>
-
-            <article>
-                <h3>Educação e Conscientização</h3>
-
-                <img src="img/palestra-escola.webp" alt="Crianças em uma palestra sobre cuidados com animais" width="300">
-
-                <p>
-                    Levamos palestras e atividades para escolas e comunidades sobre posse
-                    responsável, maus-tratos e respeito aos animais, formando uma nova
-                    geração de protetores.
-                </p>
-
-                <a href="doar.html?campanha=educacao"><button type="button">Doar</button></a>
-                <a href="cadastro.html"><button type="button">Ser voluntário</button></a>
-            </article>
+                </div>
+            </div>
         </section>
 
-        <hr>
+        <section id="galeria" class="section section--galeria">
+            <div class="container">
+                <h2>Galeria</h2>
 
-        <section id="galeria">
-            <h1>Galeria</h1>
+                <p>Veja alguns momentos dos nossos projetos em fotos e vídeos.</p>
 
-            <p>Veja alguns momentos dos nossos projetos em fotos e vídeos.</p>
+                <h3>Fotos</h3>
 
-            <h3>Fotos</h3>
+                <div class="grid">
+                    <figure class="gallery-item col-12 col-sm-6 col-lg-3">
+                        <img src="img/resgate-filhote.avif" alt="Resgate de um filhote de cachorro" loading="lazy">
+                        <figcaption>
+                            Resgate de um filhote encontrado na rua e levado para atendimento veterinário.
+                            <em>Data: <time datetime="2026-03-10">10 de março de 2026</time></em>
+                        </figcaption>
+                    </figure>
 
-            <figure>
-                <img src="img/resgate-filhote.avif" alt="Resgate de um filhote de cachorro" width="300">
-                <figcaption>Resgate de um filhote encontrado na rua e levado para atendimento veterinário. <em>Data: 10 de março de 2026</em></figcaption>
-            </figure>
+                    <figure class="gallery-item col-12 col-sm-6 col-lg-3">
+                        <img src="img/feira_de_adocao-galeria.webp" alt="Mutirão de adoção" loading="lazy">
+                        <figcaption>
+                            Mutirão de adoção com mais de 30 animais esperando por uma família.
+                            <em>Data: <time datetime="2026-04-18">18 de abril de 2026</time></em>
+                        </figcaption>
+                    </figure>
 
-            <figure>
-                <img src="img/feira_de_adocao-galeria.webp" alt="Mutirão de adoção" width="300">
-                <figcaption>Mutirão de adoção com mais de 30 animais esperando por uma família. <em>Data: 18 de abril de 2026</em></figcaption>
-            </figure>
+                    <figure class="gallery-item col-12 col-sm-6 col-lg-3">
+                        <img src="img/vacinacao-galeria.jpeg" alt="Dia de vacinação gratuita" loading="lazy">
+                        <figcaption>
+                            Dia de vacinação gratuita, com atendimento a mais de 80 animais.
+                            <em>Data: <time datetime="2026-05-23">23 de maio de 2026</time></em>
+                        </figcaption>
+                    </figure>
 
-            <figure>
-                <img src="img/vacinacao-galeria.jpeg" alt="Dia de vacinação gratuita" width="300">
-                <figcaption>Dia de vacinação gratuita, com atendimento a mais de 80 animais. <em>Data: 23 de maio de 2026</em></figcaption>
-            </figure>
+                    <figure class="gallery-item col-12 col-sm-6 col-lg-3">
+                        <img src="img/palestra-galeria.jpeg" alt="Palestra em uma escola" loading="lazy">
+                        <figcaption>
+                            Palestra sobre posse responsável em uma escola do bairro.
+                            <em>Data: <time datetime="2026-08-14">14 de agosto de 2026</time></em>
+                        </figcaption>
+                    </figure>
+                </div>
 
-            <figure>
-                <img src="img/palestra-galeria.jpeg" alt="Palestra em uma escola" width="300">
-                <figcaption>Palestra sobre posse responsável em uma escola do bairro. <em>Data: 14 de agosto de 2026</em></figcaption>
-            </figure>
+                <h3>Vídeos</h3>
 
-            <h3>Vídeos</h3>
+                <div class="grid">
+                    <figure class="gallery-item gallery-item--video col-12 col-md-6">
+                        <video src="video/reencontro-galeria.mp4" controls preload="metadata">
+                            Seu navegador não suporta a reprodução de vídeo.
+                        </video>
+                        <figcaption>
+                            Vídeo do reencontro de uma cachorrinha resgatada que se perdeu da família.
+                            <em>Data: <time datetime="2026-06-05">5 de junho de 2026</time></em>
+                        </figcaption>
+                    </figure>
 
-            <figure>
-                <video src="video/reencontro-galeria.mp4" width="400" controls></video>
-                <figcaption>Vídeo do reencontro de uma cachorrinha resgatada que se perdeu da família. <em>Data: 5 de junho de 2026</em></figcaption>
-            </figure>
-
-            <figure>
-                <video src="video/bastidores-castracao-galeria.mp4"width="400" controls></video>
-                <figcaption>Bastidores da campanha de castração solidária e do trabalho dos voluntários. <em>Data: 27 de setembro de 2026</em></figcaption>
-            </figure>
+                    <figure class="gallery-item gallery-item--video col-12 col-md-6">
+                        <video src="video/bastidores-castracao-galeria.mp4" controls preload="metadata">
+                            Seu navegador não suporta a reprodução de vídeo.
+                        </video>
+                        <figcaption>
+                            Bastidores da campanha de castração solidária e do trabalho dos voluntários.
+                            <em>Data: <time datetime="2026-09-27">27 de setembro de 2026</time></em>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
         </section>
 
     </main>
 
-    <hr>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="grid">
+                <div class="col-12 col-md-4">
+                    <h3>Contato</h3>
+                    <address class="footer__address">
+                        <p>E-mail: contato@patasquetransformam.org.br</p>
+                        <p>Telefone: (11) 99999-9999</p>
+                        <p>Endereço: Rua dos Animais, 123 - Centro - São Paulo/SP</p>
+                    </address>
+                </div>
 
-    <footer>
-        <h3>Contato</h3>
-        <p>E-mail: contato@patasquetransformam.org.br</p>
-        <p>Telefone: (11) 99999-9999</p>
-        <p>Endereço: Rua dos Animais, 123 - Centro - São Paulo/SP</p>
+                <div class="col-12 col-md-4">
+                    <h3>Siga a gente nas redes sociais</h3>
+                    <ul class="social-list">
+                        <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                        <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                        <li><a href="https://x.com/" target="_blank" rel="noopener noreferrer">X</a></li>
+                    </ul>
+                </div>
+            </div>
 
-        <h3>Siga a gente nas redes sociais</h3>
-        <ul>
-            <li><a href="https://www.instagram.com/">Instagram</a></li>
-            <li><a href="https://www.facebook.com/">Facebook</a></li>
-            <li><a href="https://x.com/">X</a></li>
-        </ul>
-
-        <p>&copy; 2026 Instituto Patas Que Transformam. Todos os direitos reservados.</p>
+            <p class="footer__copy">&copy; 2026 Instituto Patas Que Transformam. Todos os direitos reservados.</p>
+        </div>
     </footer>
 
 </body>
+
 </html>

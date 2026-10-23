@@ -4,258 +4,389 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Instituto Patas Que Transformam: resgate, cuidado e adoção responsável de animais.">
     <title>Instituto Patas Que Transformam</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
 
 <body>
 
-    <header>
-        <h1>Instituto Patas Que Transformam</h1>
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
 
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="projetos.html">Projetos</a></li>
-                <li><a href="#noticias">Notícias</a></li>
-                <li><a href="#doacao">Faça sua doação</a></li>
-                <li><a href="cadastro.html">Seja um voluntário</a></li>
-                <li><a href="#transparencia">Transparência</a></li>
-            </ul>
-        </nav>
+    <header class="site-header">
+        <div class="container site-header__inner">
+            <h1 class="site-title">Instituto Patas Que Transformam</h1>
+
+            <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">
+                <span class="menu-toggle__bar"></span>
+                <span class="menu-toggle__bar"></span>
+                <span class="menu-toggle__bar"></span>
+            </button>
+
+            <nav class="main-nav" aria-label="Menu principal">
+                <ul class="menu" id="menu-principal">
+                    <li class="menu__item"><a class="menu__link" href="index.html" aria-current="page">Início</a></li>
+                    <li class="menu__item"><a class="menu__link" href="projetos.html">Projetos</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#noticias">Notícias</a></li>
+
+                    <li class="menu__item menu__item--dropdown">
+                        <a class="menu__link" href="#doacao">Faça sua doação</a>
+                        <button class="submenu-toggle" type="button" aria-expanded="false" aria-controls="submenu-doacao" aria-label="Abrir submenu de doação">
+                            <span aria-hidden="true">▾</span>
+                        </button>
+                        <ul class="submenu" id="submenu-doacao">
+                            <li><a class="submenu__link" href="#doacao">Campanha atual</a></li>
+                            <li><a class="submenu__link" href="projetos.html">Todas as campanhas</a></li>
+                            <li><a class="submenu__link" href="doar.html">Doar agora</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="menu__item"><a class="menu__link" href="cadastro.html">Seja um voluntário</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#transparencia">Transparência</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <hr>
+    <main id="conteudo" class="site-main">
 
-    <main>
-        <section id="historia">
-            <h2>Nossa história</h2>
+        <section id="historia" class="section section--historia">
+            <div class="container">
+                <h2>Nossa história</h2>
 
-            <p>
-                O Instituto Patas Que Transformam nasceu da vontade de quatro amigos que se
-                encontravam para ajudar animais abandonados nas ruas do bairro.
-                O que começou com a entrega de ração, água, e com pequenos resgates feitos
-                com recursos do próprio bolso, cresceu e se transformou em uma organização
-                que cuida de resgate, tratamento, castração, vacinação e adoção responsável.
-            </p>
-            <img src="img/animais resgatados.webp" alt="imagem de animais resgatados">
+                <div class="grid">
+                    <div class="col-12 col-lg-7">
+                        <p>
+                            O Instituto Patas Que Transformam nasceu da vontade de quatro amigos que se
+                            encontravam para ajudar animais abandonados nas ruas do bairro.
+                            O que começou com a entrega de ração, água, e com pequenos resgates feitos
+                            com recursos do próprio bolso, cresceu e se transformou em uma organização
+                            que cuida de resgate, tratamento, castração, vacinação e adoção responsável.
+                        </p>
 
-            <p>
-                Desde a nossa fundação, já ajudamos <strong>mais de 1.200 animais</strong>
-                por meio de diferentes projetos:
-            </p>
+                        <p>
+                            Desde a nossa fundação, já ajudamos <strong>mais de 1.200 animais</strong>
+                            por meio de diferentes projetos:
+                        </p>
 
-            <ul>
-                <li>Mais de 450 cães e gatos resgatados e encaminhados para adoção;</li>
-                <li>Mais de 500 animais castrados em campanhas gratuitas;</li>
-                <li>Mais de 250 animais vacinados e vermifugados em mutirões;</li>
-                <li>Dezenas de animais com tratamento veterinário completo após resgates.</li>
-            </ul>
+                        <ul class="stats-list">
+                            <li>Mais de 450 cães e gatos resgatados e encaminhados para adoção;</li>
+                            <li>Mais de 500 animais castrados em campanhas gratuitas;</li>
+                            <li>Mais de 250 animais vacinados e vermifugados em mutirões;</li>
+                            <li>Dezenas de animais com tratamento veterinário completo após resgates.</li>
+                        </ul>
+                    </div>
 
-            <h3>Quem criou o projeto e Nossa Equipe</h3>
-            <p>O Instituto foi criado por quatro pessoas apaixonadas pela causa animal:</p>
-            <ul>
-                <li>Maria Fernanda</li>
-                <li>Lucas</li>
-                <li>Roger</li>
-                <li>Gasparelli</li>
-            </ul>
-            <p>Contamos com uma equipe de mais de <strong>10</strong> pessoas, todas juntas buscando o mesmo propósito. </p>
-            <img src="img/equipe.jpg" alt="imagem da equipe">
+                    <figure class="col-12 col-lg-5 media">
+                        <img src="img/animais resgatados.webp" alt="Animais resgatados pelo Instituto Patas Que Transformam" loading="lazy">
+                    </figure>
+                </div>
+
+                <h3>Quem criou o projeto e Nossa Equipe</h3>
+
+                <div class="grid">
+                    <div class="col-12 col-lg-7">
+                        <p>O Instituto foi criado por quatro pessoas apaixonadas pela causa animal:</p>
+                        <ul class="team-list">
+                            <li>Maria Fernanda</li>
+                            <li>Lucas</li>
+                            <li>Roger</li>
+                            <li>Gasparelli</li>
+                        </ul>
+                        <p>Contamos com uma equipe de mais de <strong>10</strong> pessoas, todas juntas buscando o mesmo propósito.</p>
+                    </div>
+
+                    <figure class="col-12 col-lg-5 media">
+                        <img src="img/equipe.jpg" alt="Equipe do Instituto Patas Que Transformam reunida" loading="lazy">
+                    </figure>
+                </div>
+            </div>
         </section>
 
-        <hr>
+        <section id="missao-visao-valores" class="section section--mvv">
+            <div class="container">
+                <h2>Missão, Visão e Valores</h2>
 
-        <section id="missao-visao-valores">
-            <h2>Missão, Visão e Valores</h2>
+                <div class="grid">
+                    <article class="card col-12 col-md-4">
+                        <div class="card__body">
+                            <h3>Missão</h3>
+                            <p>
+                                Resgatar, cuidar e encontrar um lar responsável para animais em situação de
+                                abandono ou maus-tratos, além de promover a conscientização sobre a posse
+                                responsável e o respeito a todas as formas de vida.
+                            </p>
+                        </div>
+                    </article>
 
-            <h3>Missão</h3>
-            <p>
-                Resgatar, cuidar e encontrar um lar responsável para animais em situação de
-                abandono ou maus-tratos, além de promover a conscientização sobre a posse
-                responsável e o respeito a todas as formas de vida.
-            </p>
+                    <article class="card col-12 col-md-4">
+                        <div class="card__body">
+                            <h3>Visão</h3>
+                            <p>
+                                Ser reconhecida como uma organização de referência na proteção animal,
+                                construindo uma sociedade em que nenhum animal viva nas ruas e todos
+                                tenham uma vida digna e cheia de carinho.
+                            </p>
+                        </div>
+                    </article>
 
-            <h3>Visão</h3>
-            <p>
-                Ser reconhecida como uma organização de referência na proteção animal,
-                construindo uma sociedade em que nenhum animal viva nas ruas e todos
-                tenham uma vida digna e cheia de carinho.
-            </p>
-
-            <h3>Valores</h3>
-            <ul>
-                <li>Amor e respeito aos animais;</li>
-                <li>Transparência no uso dos recursos;</li>
-                <li>Responsabilidade e compromisso com cada resgate;</li>
-                <li>Ética e honestidade em todas as nossas ações;</li>
-                <li>Empatia com animais e com pessoas;</li>
-                <li>Trabalho em equipe e voluntariado.</li>
-            </ul>
+                    <article class="card col-12 col-md-4">
+                        <div class="card__body">
+                            <h3>Valores</h3>
+                            <ul>
+                                <li>Amor e respeito aos animais;</li>
+                                <li>Transparência no uso dos recursos;</li>
+                                <li>Responsabilidade e compromisso com cada resgate;</li>
+                                <li>Ética e honestidade em todas as nossas ações;</li>
+                                <li>Empatia com animais e com pessoas;</li>
+                                <li>Trabalho em equipe e voluntariado.</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
         </section>
 
-        <hr>
+        <section id="noticias" class="section section--noticias">
+            <div class="container">
+                <h2>Notícias</h2>
 
-        <section id="noticias">
-            <h2>Notícias</h2>
+                <div class="grid">
+                    <article class="card card--news col-12 col-md-6 col-lg-4">
+                        <figure class="card__media">
+                            <img src="img/noticia-evento-de-adoção.webp" alt="Mutirão de adoção de cães e gatos" loading="lazy">
+                        </figure>
+                        <div class="card__body">
+                            <span class="badge badge--adocao">Adoção</span>
+                            <h3>Mutirão de adoção de cães e gatos</h3>
+                            <p><em>Data: <time datetime="2026-11-15">15 de novembro de 2026</time></em></p>
+                            <p>
+                                Venha conhecer seu novo melhor amigo! Teremos um grande mutirão de adoção
+                                com vários cães e gatos, todos vacinados, vermifugados e castrados,
+                                esperando por uma família. A adoção é gratuita e feita com
+                                acompanhamento da nossa equipe.
+                            </p>
+                            <ul class="tag-list">
+                                <li class="tag">Gratuito</li>
+                                <li class="tag">Cães e gatos</li>
+                            </ul>
+                        </div>
+                    </article>
 
-            <article>
-                <h3>Mutirão de adoção de cães e gatos</h3>
+                    <article class="card card--news col-12 col-md-6 col-lg-4">
+                        <figure class="card__media">
+                            <img src="img/noticia-evento de vacinacao.jpg" alt="Veterinária vacinando um cachorro" loading="lazy">
+                        </figure>
+                        <div class="card__body">
+                            <span class="badge badge--saude">Saúde</span>
+                            <h3>Dia de vacinação gratuita</h3>
+                            <p><em>Data: <time datetime="2026-11-29">29 de novembro de 2026</time></em></p>
+                            <p>
+                                Traga seu cão ou gato para receber a vacina antirrábica gratuitamente.
+                                Haverá também aplicação de vermífugo e orientações de cuidados
+                                com a saúde do seu pet. Leve a carteirinha de vacinação, se tiver.
+                            </p>
+                            <ul class="tag-list">
+                                <li class="tag">Gratuito</li>
+                                <li class="tag">Cães e gatos</li>
+                            </ul>
+                        </div>
+                    </article>
 
-                <img src="img/noticia-evento-de-adoção.webp" alt="Mutirão de adoção de cães e gatos">
-
-                <p><em>Data: 15 de novembro de 2026</em></p>
-                <p>
-                    Venha conhecer seu novo melhor amigo! Teremos um grande mutirão de adoção
-                    com vários cães e gatos, todos vacinados, vermifugados e castrados,
-                    esperando por uma família. A adoção é gratuita e feita com
-                    acompanhamento da nossa equipe.
-                </p>
-            </article>
-
-            <hr>
-
-            <article>
-                <h3>Dia de vacinação gratuita</h3>
-
-                <img src="img/noticia-evento de vacinacao.jpg" alt="Veterinária vacinando um cachorro">
-
-                <p><em>Data: 29 de novembro de 2026</em></p>
-                <p>
-                    Traga seu cão ou gato para receber a vacina antirrábica gratuitamente.
-                    Haverá também aplicação de vermífugo e orientações de cuidados
-                    com a saúde do seu pet. Leve a carteirinha de vacinação, se tiver.
-                </p>
-            </article>
-
-            <hr>
-
-            <article>
-                <h3>Campanha de castração solidária</h3>
-
-                <img src="img/noticia-evento de castração.jpeg" alt="Animal sendo atendido em campanha de castração">
-
-                <p><em>Data: 13 de dezembro de 2026</em></p>
-                <p>
-                    Estão abertas as inscrições para a campanha de castração solidária.
-                    A castração é uma das formas mais eficientes de reduzir o abandono e
-                    garantir mais saúde e qualidade de vida aos animais. As vagas são
-                    limitadas, então inscreva-se!
-                </p>
-            </article>
+                    <article class="card card--news col-12 col-md-6 col-lg-4">
+                        <figure class="card__media">
+                            <img src="img/noticia-evento de castração.jpeg" alt="Animal sendo atendido em campanha de castração" loading="lazy">
+                        </figure>
+                        <div class="card__body">
+                            <span class="badge badge--castracao">Castração</span>
+                            <h3>Campanha de castração solidária</h3>
+                            <p><em>Data: <time datetime="2026-12-13">13 de dezembro de 2026</time></em></p>
+                            <p>
+                                Estão abertas as inscrições para a campanha de castração solidária.
+                                A castração é uma das formas mais eficientes de reduzir o abandono e
+                                garantir mais saúde e qualidade de vida aos animais. As vagas são
+                                limitadas, então inscreva-se!
+                            </p>
+                            <ul class="tag-list">
+                                <li class="tag">Vagas limitadas</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
         </section>
 
-        <hr>
+        <section id="doacao" class="section section--doacao">
+            <div class="container">
+                <h2>Faça sua doação</h2>
 
-        <section id="doacao">
-            <h2>Faça sua doação</h2>
+                <p>
+                    Cada contribuição, de qualquer valor, ajuda a transformar a vida de um
+                    animal. Escolha uma campanha e faça parte dessa história!
+                </p>
 
-            <p>
-                Cada contribuição, de qualquer valor, ajuda a transformar a vida de um
-                animal. Escolha uma campanha e faça parte dessa história!
-            </p>
+                <article class="card card--campaign">
+                    <figure class="card__media">
+                        <img src="img/campanha de doacao.webp" alt="Animais resgatados em recuperação" loading="lazy">
+                    </figure>
+                    <div class="card__body">
+                        <span class="badge badge--success">Campanha ativa</span>
+                        <h3>Campanha: Casa de Recuperação para Animais Resgatados</h3>
 
-            <h3>Campanha: Casa de Recuperação para Animais Resgatados</h3>
+                        <p>
+                            Estamos construindo um espaço adequado para receber, tratar e abrigar os
+                            animais resgatados até que eles encontrem um novo lar. Os recursos serão
+                            usados na compra de baias, medicamentos, ração e materiais de limpeza.
+                        </p>
 
-            <img src="img/campanha de doacao.webp" alt="Animais resgatados em recuperação">
+                        <div class="campaign-progress">
+                            <label for="progresso-campanha">Progresso da campanha</label>
+                            <progress id="progresso-campanha" value="6500" max="10000">65%</progress>
+                        </div>
 
-            <p>
-                Estamos construindo um espaço adequado para receber, tratar e abrigar os
-                animais resgatados até que eles encontrem um novo lar. Os recursos serão
-                usados na compra de baias, medicamentos, ração e materiais de limpeza.
-            </p>
+                        <dl class="campaign-stats">
+                            <div>
+                                <dt>Meta da campanha</dt>
+                                <dd>R$ 10.000,00</dd>
+                            </div>
+                            <div>
+                                <dt>Já arrecadado</dt>
+                                <dd>R$ 6.500,00</dd>
+                            </div>
+                            <div>
+                                <dt>Ainda falta</dt>
+                                <dd>R$ 3.500,00</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </article>
 
-            <p><strong>Meta da campanha:</strong> R$ 10.000,00</p>
-            <p><strong>Já arrecadado:</strong> R$ 6.500,00</p>
-            <p><strong>Ainda falta:</strong> R$ 3.500,00</p>
+                <h3>Escolha o valor da sua doação</h3>
 
-            <h3>Escolha o valor da sua doação</h3>
+                <form id="form-doacao" class="form donation-form">
+                    <div class="donation-options">
+                        <button type="button" class="btn btn--outline" data-valor="5">R$ 5</button>
+                        <button type="button" class="btn btn--outline" data-valor="20">R$ 20</button>
+                        <button type="button" class="btn btn--outline" data-valor="50">R$ 50</button>
+                        <button type="button" class="btn btn--outline" id="btn-outro-valor">Escolha um valor</button>
+                    </div>
 
-            <form>
-                <button type="button">R$ 5</button>
-                <button type="button">R$ 20</button>
-                <button type="button">R$ 50</button>
-                <button type="button">Escolha um valor</button>
-                <input type="text" name="outro-valor" placeholder="Digite o valor desejado">
+                    <div class="form-field">
+                        <label for="outro-valor">Outro valor (R$)</label>
+                        <input type="number" id="outro-valor" name="outro-valor" min="1" step="0.01" inputmode="decimal" placeholder="Digite o valor desejado" aria-describedby="alerta-doacao">
+                    </div>
 
-                <button type="submit">Doar agora</button>
-            </form>
+                    <div class="alert alert--error" id="alerta-doacao" role="alert" hidden>
+                        Informe um valor maior que zero para doar.
+                    </div>
+
+                    <button type="submit" class="btn btn--primary" id="btn-doar" disabled>Doar agora</button>
+                </form>
+            </div>
         </section>
 
-        <hr>
+        <section id="voluntario" class="section section--voluntario">
+            <div class="container">
+                <h2>Seja um voluntário</h2>
 
-        <section id="voluntario">
-            <h2>Seja um voluntário</h2>
+                <div class="grid">
+                    <figure class="col-12 col-lg-5 media">
+                        <img src="img/voluntarios ajudando.jpg" alt="Voluntários cuidando de animais" loading="lazy">
+                    </figure>
 
-            <img src="img/voluntarios ajudando.jpg" alt="Voluntários cuidando de animais">
+                    <div class="col-12 col-lg-7">
+                        <p>
+                            Você pode ajudar de muitas formas: passeando com os cães, ajudando nos
+                            mutirões de adoção, cuidando da divulgação nas redes sociais, transportando
+                            animais ou apoiando nos eventos. Todo mundo tem algo a oferecer!
+                        </p>
 
-            <p>
-                Você pode ajudar de muitas formas: passeando com os cães, ajudando nos
-                mutirões de adoção, cuidando da divulgação nas redes sociais, transportando
-                animais ou apoiando nos eventos. Todo mundo tem algo a oferecer!
-            </p>
+                        <p>
+                            <a class="btn btn--primary" href="cadastro.html">Quero ser voluntário</a>
+                        </p>
 
-            <p>
-                <a href="cadastro.html"><button type="button">Quero ser voluntário</button></a>
-            </p>
-
-            <h3>Para mais informações entre em contato</h3>
-            <p>E-mail: contato@patasquetransformam.org.br</p>
-            <p>Telefone: (11) 99999-9999</p>
+                        <h3>Para mais informações entre em contato</h3>
+                        <p>E-mail: contato@patasquetransformam.org.br</p>
+                        <p>Telefone: (11) 99999-9999</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <hr>
-
-        <section id="transparencia">
-            <h2>Transparência</h2>
-
-            <p>
-                No Instituto Patas Que Transformam, buscamos ser 100% verdadeiros e
-                transparentes com todas as pessoas que doam. Por isso, disponibilizamos
-                um Relatório de Transparência, com informações sobre o valor arrecadado,
-                como cada doação foi utilizada e os resultados alcançados. Preencha os
-                dados abaixo para solicitar o seu relatório.
-            </p>
-
-            <form>
-                <p>
-                    <label for="nome">Nome:</label><br>
-                    <input type="text" id="nome" name="nome">
-                </p>
+        <section id="transparencia" class="section section--transparencia">
+            <div class="container">
+                <h2>Transparência</h2>
 
                 <p>
-                    <label for="email">E-mail:</label><br>
-                    <input type="text" id="email" name="email">
+                    No Instituto Patas Que Transformam, buscamos ser 100% verdadeiros e
+                    transparentes com todas as pessoas que doam. Por isso, disponibilizamos
+                    um Relatório de Transparência, com informações sobre o valor arrecadado,
+                    como cada doação foi utilizada e os resultados alcançados. Preencha os
+                    dados abaixo para solicitar o seu relatório.
                 </p>
 
-                <p>
-                    <label for="telefone">Telefone:</label><br>
-                    <input type="text" id="telefone" name="telefone">
-                </p>
+                <form id="form-relatorio" class="form">
+                    <fieldset class="form-group">
+                        <legend>Seus dados</legend>
 
-                <button type="submit">Solicitar relatório</button>
-            </form>
+                        <div class="form-field">
+                            <label for="nome">Nome <span class="required-mark" aria-hidden="true">*</span></label>
+                            <input type="text" id="nome" name="nome" required minlength="3" autocomplete="name" placeholder="Seu nome completo">
+                        </div>
+
+                        <div class="form-field">
+                            <label for="email">E-mail <span class="required-mark" aria-hidden="true">*</span></label>
+                            <input type="email" id="email" name="email" required autocomplete="email" placeholder="seuemail@exemplo.com">
+                        </div>
+
+                        <div class="form-field">
+                            <label for="telefone">Telefone</label>
+                            <input type="tel" id="telefone" name="telefone" autocomplete="tel" pattern="\(?\d{2}\)?\s?\d{4,5}-?\d{4}" placeholder="(11) 99999-9999" aria-describedby="telefone-dica">
+                            <small class="field-hint" id="telefone-dica">Opcional. Use DDD, por exemplo: (11) 99999-9999.</small>
+                        </div>
+                    </fieldset>
+
+                    <button type="submit" class="btn btn--primary">Solicitar relatório</button>
+                </form>
+            </div>
         </section>
 
     </main>
 
-    <hr>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="grid">
+                <div class="col-12 col-md-4">
+                    <h3>Contato</h3>
+                    <address class="footer__address">
+                        <p>E-mail: contato@patasquetransformam.org.br</p>
+                        <p>Telefone: (11) 99999-9999</p>
+                        <p>Endereço: Rua dos Animais, 123 - Centro - São Paulo/SP</p>
+                    </address>
+                </div>
 
-    <footer>
-        <h3>Contato</h3>
-        <p>E-mail: contato@patasquetransformam.org.br</p>
-        <p>Telefone: (11) 99999-9999</p>
-        <p>Endereço: Rua dos Animais, 123 - Centro - São Paulo/SP</p>
+                <div class="col-12 col-md-4">
+                    <h3>Siga a gente nas redes sociais</h3>
+                    <ul class="social-list">
+                        <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                        <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                        <li><a href="https://x.com/" target="_blank" rel="noopener noreferrer">X</a></li>
+                    </ul>
+                </div>
+            </div>
 
-        <h3>Siga a gente nas redes sociais</h3>
-        <ul>
-            <li><a href="https://www.instagram.com/">Instagram</a></li>
-            <li><a href="https://www.facebook.com/">Facebook</a></li>
-            <li><a href="https://x.com/">X</a></li>
-        </ul>
-
-        <p>&copy; 2026 Instituto Patas Que Transformam. Todos os direitos reservados.</p>
+            <p class="footer__copy">&copy; 2026 Instituto Patas Que Transformam. Todos os direitos reservados.</p>
+        </div>
     </footer>
+
+    <div id="toast" class="toast toast--success" role="status" aria-live="polite" hidden></div>
+
+    <dialog id="modal-relatorio" class="modal" aria-labelledby="modal-relatorio-titulo">
+        <h2 id="modal-relatorio-titulo">Solicitação enviada</h2>
+        <p>Recebemos o seu pedido do Relatório de Transparência. Obrigado pelo interesse!</p>
+        <button type="button" class="btn btn--primary" data-fechar-modal>Fechar</button>
+    </dialog>
 
 </body>
 

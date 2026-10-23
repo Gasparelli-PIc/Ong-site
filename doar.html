@@ -4,149 +4,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Faça sua doação para o Instituto Patas Que Transformam e ajude a transformar a vida de animais resgatados.">
     <title>Doar - Instituto Patas Que Transformam</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
 
 <body>
 
-    <header>
-        <h1>Instituto Patas Que Transformam</h1>
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
 
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="projetos.html">Projetos</a></li>
-                <li><a href="index.html#noticias">Notícias</a></li>
-                <li><a href="index.html#doacao">Faça sua doação</a></li>
-                <li><a href="cadastro.html">Seja um voluntário</a></li>
-                <li><a href="index.html#transparencia">Transparência</a></li>
-            </ul>
-        </nav>
+    <header class="site-header">
+        <div class="container site-header__inner">
+            <h1 class="site-title">Instituto Patas Que Transformam</h1>
+
+            <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">
+                <span class="menu-toggle__bar"></span>
+                <span class="menu-toggle__bar"></span>
+                <span class="menu-toggle__bar"></span>
+            </button>
+
+            <nav class="main-nav" aria-label="Menu principal">
+                <ul class="menu" id="menu-principal">
+                    <li class="menu__item"><a class="menu__link" href="index.html">Início</a></li>
+                    <li class="menu__item"><a class="menu__link" href="projetos.html">Projetos</a></li>
+                    <li class="menu__item"><a class="menu__link" href="index.html#noticias">Notícias</a></li>
+
+                    <li class="menu__item menu__item--dropdown">
+                        <a class="menu__link" href="index.html#doacao">Faça sua doação</a>
+                        <button class="submenu-toggle" type="button" aria-expanded="false" aria-controls="submenu-doacao" aria-label="Abrir submenu de doação">
+                            <span aria-hidden="true">▾</span>
+                        </button>
+                        <ul class="submenu" id="submenu-doacao">
+                            <li><a class="submenu__link" href="index.html#doacao">Campanha atual</a></li>
+                            <li><a class="submenu__link" href="projetos.html#projetos">Todas as campanhas</a></li>
+                            <li><a class="submenu__link" href="doar.html" aria-current="page">Doar agora</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="menu__item"><a class="menu__link" href="cadastro.html">Seja um voluntário</a></li>
+                    <li class="menu__item"><a class="menu__link" href="index.html#transparencia">Transparência</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <hr>
+    <main id="conteudo" class="site-main">
 
-    <main>
+        <section id="agradecimento-inicial" class="section section--agradecimento">
+            <div class="container">
+                <h2>Obrigado por querer ajudar!</h2>
 
-        <section id="agradecimento-inicial">
-            <h2>Obrigado por querer ajudar!</h2>
-
-            <p>
-                Em nome de todos nós do Instituto Patas Que Transformam, e principalmente
-                dos animais que recebem o seu carinho, muito obrigado por fazer parte
-                dessa história. Cada doação, de qualquer valor, se transforma em comida,
-                cuidados veterinários, abrigo e novas chances de vida.
-            </p>
+                <p>
+                    Em nome de todos nós do Instituto Patas Que Transformam, e principalmente
+                    dos animais que recebem o seu carinho, muito obrigado por fazer parte
+                    dessa história. Cada doação, de qualquer valor, se transforma em comida,
+                    cuidados veterinários, abrigo e novas chances de vida.
+                </p>
+            </div>
         </section>
 
-        <hr>
+        <section id="campanha" class="section section--campanha">
+            <div class="container">
+                <h2>Campanha escolhida</h2>
 
-        <section id="campanha">
-            <h2>Campanha escolhida</h2>
-
-            <h3 id="campanha-titulo"></h3>
-
-            <p id="campanha-descricao"></p>
+                <article class="card card--campaign">
+                    <figure class="card__media">
+                        <img id="campanha-imagem" src="img/campanha de doacao.webp" alt="Animais em recuperação na casa de acolhimento">
+                    </figure>
+                    <div class="card__body">
+                        <h3 id="campanha-titulo"></h3>
+                        <p id="campanha-descricao"></p>
+                    </div>
+                </article>
+            </div>
         </section>
 
-        <hr>
+        <section id="formulario-doacao" class="section section--formulario">
+            <div class="container">
+                <h2>Faça sua doação</h2>
 
-        <section id="formulario-doacao">
-            <h2>Faça sua doação</h2>
+                <p class="form-note"><span class="required-mark" aria-hidden="true">*</span> Campos obrigatórios.</p>
 
-            <form id="form-doacao">
+                <form id="form-doar" class="form donation-form">
 
-                <h3>Seus dados</h3>
+                    <fieldset class="form-group">
+                        <legend>Seus dados</legend>
 
-                <p>
-                    <label for="nome">Nome:</label><br>
-                    <input type="text" id="nome" name="nome" required>
-                </p>
+                        <div class="grid">
+                            <div class="form-field col-12">
+                                <label for="nome">Nome <span class="required-mark" aria-hidden="true">*</span></label>
+                                <input type="text" id="nome" name="nome" required minlength="3" autocomplete="name" placeholder="Seu nome completo">
+                            </div>
 
-                <p>
-                    <label for="telefone">Telefone:</label><br>
-                    <input type="tel" id="telefone" name="telefone" required>
-                </p>
+                            <div class="form-field col-12 col-md-6">
+                                <label for="telefone">Telefone <span class="required-mark" aria-hidden="true">*</span></label>
+                                <input type="tel" id="telefone" name="telefone" required autocomplete="tel" pattern="\(?\d{2}\)?\s?\d{4,5}-?\d{4}" title="Digite o telefone com DDD, por exemplo: (11) 99999-9999" placeholder="(11) 99999-9999">
+                            </div>
 
-                <p>
-                    <label for="email">E-mail:</label><br>
-                    <input type="email" id="email" name="email" required>
-                </p>
+                            <div class="form-field col-12 col-md-6">
+                                <label for="email">E-mail <span class="required-mark" aria-hidden="true">*</span></label>
+                                <input type="email" id="email" name="email" required autocomplete="email" placeholder="seuemail@exemplo.com">
+                            </div>
+                        </div>
+                    </fieldset>
 
-                <h3>Escolha o valor da sua doação</h3>
+                    <fieldset class="form-group">
+                        <legend>Escolha o valor da sua doação</legend>
 
-                <button type="button" onclick="escolherValor(5)">R$ 5</button>
-                <button type="button" onclick="escolherValor(20)">R$ 20</button>
-                <button type="button" onclick="escolherValor(50)">R$ 50</button>
-                <button type="button" onclick="escolherOutroValor()">Escolha um valor</button>
-                <input type="text" id="outro-valor" name="outro-valor" placeholder="Digite o valor desejado"
-                    oninput="digitarOutroValor()">
+                        <div class="donation-options">
+                            <button type="button" class="btn btn--outline" data-valor="5">R$ 5</button>
+                            <button type="button" class="btn btn--outline" data-valor="20">R$ 20</button>
+                            <button type="button" class="btn btn--outline" data-valor="50">R$ 50</button>
+                            <button type="button" class="btn btn--outline" id="btn-outro-valor">Escolha um valor</button>
+                        </div>
 
-                <p id="valor-selecionado"><strong>Nenhum valor selecionado</strong></p>
+                        <div class="form-field">
+                            <label for="outro-valor">Outro valor (R$)</label>
+                            <input type="text" id="outro-valor" name="outro-valor" inputmode="decimal" pattern="\d+([.,]\d{1,2})?" title="Digite apenas números, por exemplo: 35 ou 35,50" placeholder="Digite o valor desejado">
+                        </div>
 
-                <hr>
+                        <p class="selected-value" aria-live="polite"><strong id="valor-selecionado">Nenhum valor selecionado</strong></p>
 
-                <h3>Prefere doar ração ou visitar a gente?</h3>
+                        <div class="alert alert--error" id="alerta-valor" role="alert" hidden>
+                            Por favor, escolha ou digite um valor para a sua doação.
+                        </div>
+                    </fieldset>
 
-                <p>
-                    <strong>Quer doar ração?</strong> Você pode enviar pelo correio para a nossa
-                    caixa postal:
-                </p>
-                <p>
-                    Instituto Patas Que Transformam<br>
-                    Caixa Postal 4521<br>
-                    CEP 01000-000 - São Paulo/SP
-                </p>
+                    <div class="info-box">
+                        <h3>Prefere doar ração ou visitar a gente?</h3>
 
-                <p>
-                    <strong>Prefere ir pessoalmente?</strong> Será um prazer receber você para
-                    doar ou conhecer nosso trabalho. Nosso endereço é:
-                </p>
-                <p>
-                    Rua dos Animais, 123 - Centro - São Paulo/SP<br>
-                    Atendimento: segunda a sábado, das 9h às 17h
-                </p>
+                        <div class="grid">
+                            <div class="col-12 col-md-6">
+                                <p><strong>Quer doar ração?</strong> Você pode enviar pelo correio para a nossa caixa postal:</p>
+                                <address>
+                                    Instituto Patas Que Transformam<br>
+                                    Caixa Postal 4521<br>
+                                    CEP 01000-000 - São Paulo/SP
+                                </address>
+                            </div>
 
-                <hr>
+                            <div class="col-12 col-md-6">
+                                <p><strong>Prefere ir pessoalmente?</strong> Será um prazer receber você para doar ou conhecer nosso trabalho. Nosso endereço é:</p>
+                                <address>
+                                    Rua dos Animais, 123 - Centro - São Paulo/SP<br>
+                                    Atendimento: segunda a sábado, das 9h às 17h
+                                </address>
+                            </div>
+                        </div>
+                    </div>
 
-                <button type="submit">Doar</button>
-            </form>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn--primary">Doar</button>
+                    </div>
+                </form>
+            </div>
         </section>
 
-        <section id="agradecimento-final" hidden>
-            <h2>Doação realizada com sucesso!</h2>
+        <section id="agradecimento-final" class="section section--agradecimento-final" hidden>
+            <div class="container">
+                <h2>Doação realizada com sucesso!</h2>
 
-            <p id="mensagem-final"></p>
+                <p id="mensagem-final"></p>
 
-            <p>
-                O comprovante da sua doação será encaminhado para o seu e-mail.
-            </p>
+                <p>
+                    O comprovante da sua doação será encaminhado para o seu e-mail.
+                </p>
 
-            <p>
-                <a href="projetos.html">Ver outros projetos</a> |
-                <a href="index.html">Voltar para o início</a>
-            </p>
+                <div class="form-actions">
+                    <a class="btn btn--primary" href="projetos.html">Ver outros projetos</a>
+                    <a class="btn btn--outline" href="index.html">Voltar para o início</a>
+                </div>
+            </div>
         </section>
 
     </main>
 
-    <hr>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="grid">
+                <div class="col-12 col-md-4">
+                    <h3>Contato</h3>
+                    <address class="footer__address">
+                        <p>E-mail: contato@patasquetransformam.org.br</p>
+                        <p>Telefone: (11) 99999-9999</p>
+                        <p>Endereço: Rua dos Animais, 123 - Centro - São Paulo/SP</p>
+                    </address>
+                </div>
 
-    <footer>
-        <h3>Contato</h3>
-        <p>E-mail: contato@patasquetransformam.org.br</p>
-        <p>Telefone: (11) 99999-9999</p>
-        <p>Endereço: Rua dos Animais, 123 - Centro - São Paulo/SP</p>
+                <div class="col-12 col-md-4">
+                    <h3>Siga a gente nas redes sociais</h3>
+                    <ul class="social-list">
+                        <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                        <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                        <li><a href="https://x.com/" target="_blank" rel="noopener noreferrer">X</a></li>
+                    </ul>
+                </div>
+            </div>
 
-        <h3>Siga a gente nas redes sociais</h3>
-        <ul>
-            <li><a href="https://www.instagram.com/">Instagram</a></li>
-            <li><a href="https://www.facebook.com/">Facebook</a></li>
-            <li><a href="https://x.com/">X</a></li>
-        </ul>
-
-        <p>&copy; 2026 Instituto Patas Que Transformam. Todos os direitos reservados.</p>
+            <p class="footer__copy">&copy; 2026 Instituto Patas Que Transformam. Todos os direitos reservados.</p>
+        </div>
     </footer>
 
     <script>
@@ -155,37 +212,37 @@
             "resgate": {
                 titulo: "Resgate e Acolhimento",
                 descricao: "Nossa equipe e nossos voluntários resgatam animais em situação de abandono ou maus-tratos, oferecendo atendimento de emergência, alimentação e um abrigo seguro.",
-                imagem: "imagens/projeto-resgate.jpg",
+                imagem: "img/cachorro-resgatado.jpg",
                 alt: "Resgate de cachorro abandonado"
             },
             "adocao": {
                 titulo: "Adoção Responsável",
                 descricao: "Realizamos feiras e mutirões de adoção, com acompanhamento das famílias, para garantir que cada animal encontre um lar cheio de amor e responsabilidade.",
-                imagem: "imagens/projeto-adocao.jpg",
-                alt: "Família adotando um gatinho"
+                imagem: "img/feira-de-adocao.jpg",
+                alt: "Família adotando um gato"
             },
             "castracao": {
                 titulo: "Castração Solidária",
                 descricao: "Oferecemos castração gratuita ou a preço social para animais de famílias de baixa renda e de rua, ajudando a reduzir o abandono e a superpopulação de animais.",
-                imagem: "imagens/projeto-castracao.jpg",
+                imagem: "img/Castracao-solidaria.jpeg",
                 alt: "Veterinário realizando castração"
             },
             "vacinacao": {
                 titulo: "Vacinação Gratuita",
                 descricao: "Promovemos dias de vacinação e vermifugação gratuitas para proteger a saúde dos animais e prevenir doenças, como a raiva, nas comunidades.",
-                imagem: "imagens/projeto-vacinacao.jpg",
+                imagem: "img/vacina-solidaria.png",
                 alt: "Cachorro sendo vacinado"
             },
             "casa-recuperacao": {
                 titulo: "Casa de Recuperação",
                 descricao: "Estamos construindo um espaço para tratar animais feridos e doentes, com baias, medicamentos e cuidados veterinários até que estejam prontos para a adoção.",
-                imagem: "imagens/projeto-casa-recuperacao.jpg",
+                imagem: "img/campanha de doacao.webp",
                 alt: "Animais em recuperação na casa de acolhimento"
             },
             "educacao": {
                 titulo: "Educação e Conscientização",
                 descricao: "Levamos palestras e atividades para escolas e comunidades sobre posse responsável, maus-tratos e respeito aos animais, formando uma nova geração de protetores.",
-                imagem: "imagens/projeto-educacao.jpg",
+                imagem: "img/palestra-escola.webp",
                 alt: "Crianças em uma palestra sobre cuidados com animais"
             }
         };
@@ -209,39 +266,57 @@
         }
 
         var valorEscolhido = "";
+        var botoesDeValor = document.querySelectorAll("#form-doar [data-valor]");
+        var botaoOutroValor = document.getElementById("btn-outro-valor");
+        var campoOutroValor = document.getElementById("outro-valor");
+        var alertaValor = document.getElementById("alerta-valor");
 
-        function escolherValor(valor) {
-            valorEscolhido = valor;
-            document.getElementById("outro-valor").value = "";
-            mostrarValor();
+        function desmarcarBotoesDeValor() {
+            botoesDeValor.forEach(function (botao) {
+                botao.classList.remove("is-selected");
+            });
         }
 
-        function escolherOutroValor() {
-            valorEscolhido = "";
-            mostrarValor();
-            document.getElementById("outro-valor").focus();
-        }
-
-        function digitarOutroValor() {
-            valorEscolhido = document.getElementById("outro-valor").value;
-            mostrarValor();
-        }
-
-        function mostrarValor() {
+        function mostrarValorEscolhido() {
             var texto = "Nenhum valor selecionado";
             if (valorEscolhido !== "") {
                 texto = "Valor selecionado: R$ " + valorEscolhido;
             }
-            document.getElementById("valor-selecionado").innerHTML = "<strong>" + texto + "</strong>";
+            document.getElementById("valor-selecionado").textContent = texto;
         }
 
-        document.getElementById("form-doacao").onsubmit = function (evento) {
+        botoesDeValor.forEach(function (botao) {
+            botao.addEventListener("click", function () {
+                desmarcarBotoesDeValor();
+                botao.classList.add("is-selected");
+                valorEscolhido = botao.getAttribute("data-valor");
+                campoOutroValor.value = "";
+                alertaValor.hidden = true;
+                mostrarValorEscolhido();
+            });
+        });
+
+        botaoOutroValor.addEventListener("click", function () {
+            desmarcarBotoesDeValor();
+            valorEscolhido = "";
+            mostrarValorEscolhido();
+            campoOutroValor.focus();
+        });
+
+        campoOutroValor.addEventListener("input", function () {
+            desmarcarBotoesDeValor();
+            valorEscolhido = campoOutroValor.value;
+            alertaValor.hidden = true;
+            mostrarValorEscolhido();
+        });
+
+        document.getElementById("form-doar").addEventListener("submit", function (evento) {
             evento.preventDefault();
 
             var numero = Number(String(valorEscolhido).replace(",", "."));
 
             if (valorEscolhido === "" || isNaN(numero) || numero <= 0) {
-                alert("Por favor, escolha ou digite um valor para a sua doação.");
+                alertaValor.hidden = false;
                 return;
             }
 
@@ -254,7 +329,7 @@
             document.getElementById("formulario-doacao").hidden = true;
             document.getElementById("agradecimento-final").hidden = false;
             window.scrollTo(0, 0);
-        };
+        });
     </script>
 
 </body>
